@@ -61,7 +61,7 @@ Based on the reverse engineering of SSBP and PSFP, we can train any entries of t
 <center><img src="figures/Transient-Attack.png" width="80%"> </center>
 <center> <b>Fig 1. </b> &nbsp Transient Execution of PSFP and SSBP. </center>
 
-###
+####
 
 As shown in Fig 1, we delay the data address generation of the store by performing time-consuming calculations or loading the data address from memory (1). This allows the predictors to be used to predict whether the load can bypass the store and whether the data of the store can be forwarded to the load before its address is generated. For simplification, assume that the DPA of the store is 0xaa, and the data is 0xdd. The DPA of the load is 0xaa (2a) or 0xbb (2b) in different cases. The memory 0xaa contains the value 0xcc.
 
@@ -75,6 +75,8 @@ To search for the collision, we use the code sliding shown in Fig 2.
 
 <center><img src="figures/Collision-Finding.png" width="80%"> </center>
 <center> <b>Fig 2. </b> &nbsp Code sliding to find collision for the predictors. </center>
+
+####
 
 The store-load pair in the victim fixes at an address. We obtain the machine code of another store-load pair for priming and probing the PSFP and SSBP, and fill the machine code into a set of contiguous pages.
 

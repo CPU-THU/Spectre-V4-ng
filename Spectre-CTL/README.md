@@ -86,6 +86,8 @@ The attack process is shown in Fig 1. (Fig 10 in the paper).
 <center><img src="../figures/Spectre-CTL.png" width="80%"> </center>
 <center> <b>Fig 1. </b> &nbsp Spectre-CTL Attack </center>
 
+####
+
 Similar to Spectre-STL, Spectre-CTL requires one store and three loads in the victim’s address  space:
 
 ```c
@@ -149,10 +151,10 @@ The lenght of bytes that will be leaked, which is suggested to be less than the 
 
 Try times for secret leakage, which is 100 by dedault.
 
-### TRY_FOR_COLLISION
+#### TRY_FOR_COLLISION
 
 Try times for collision finding, which is 10 by dedault.
 
-### PG_NUM
+#### PG_NUM
 
 Size of the empty executable page for code sliding, which is 5 by dedault.

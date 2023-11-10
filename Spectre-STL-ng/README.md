@@ -141,10 +141,10 @@ Encoding granularity for Flush+Reload. The larger size will result in a better r
 
 Try times for secret leakage, which is 100 by dedault.
 
-### TRY_FOR_COLLISION
+#### TRY_FOR_COLLISION
 
 Try times for collision finding, which is 10 by dedault.
 
-### PG_NUM
+#### PG_NUM
 
 Size of the empty executable page for code sliding, which is 8 by dedault.
