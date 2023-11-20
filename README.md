@@ -84,6 +84,10 @@ After that, we execute the store-load pair in the victim space using a well-desi
 
 Finally, we check whether the collision occurs by timing the execution of the candidate prime and probe function. If the execution time matches the SSBP or PSFP state, the collision occurs. Otherwise, the collision does not occur, and we increase the entry address of the candidate prime and probe function by one byte, so that the IPA moves one byte within the page for the next attempt. 
 
+## Defense
+
+To mitigate these new variants of Spectre attacks, we recommend AMD users to activate Speculative Store Bypass Disable (SSBD). While enabling SSBD may incur a performance loss, it effectively stops the attacks because SSBP and PSFP are disabled with SSBD enabld.
+
 ## Research Paper
 
 Our research on SSBP and PSFP, including out-of-place Spectre-STL and Spectre-CTL attacks, is presented in paper *Uncovering and Exploiting AMD Speculative
